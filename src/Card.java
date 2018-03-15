@@ -7,7 +7,6 @@ public class Card {
 	private String color;	// couleur de la Card (Piques, Coeurs etc...)
 	private boolean piochee;	// indique si la Card a été piochée ou non
 	private boolean visible;	// indique si l'on peut voir la carte
-	int prout;
 
 	protected Card() {
 		

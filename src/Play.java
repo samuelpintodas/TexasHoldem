@@ -15,11 +15,12 @@ public class Play {
 
 		myDeck.fillDeck(deck);
 		myHand.piocher(deck, main);
-//		myFlop.disposeflop(deck, flop);
+//		myFlop.piocher(deck, flop);
+//		myFlop.retourner(flop);
 
-		myDeck.displayDeck(deck);
+//		myDeck.displayDeck(deck);
 		myHand.displayHand(main);
-//		myFlop.displayflop(flop);
+//		myFlop.retourner(flop);
 		
 
 	}
