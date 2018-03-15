@@ -17,6 +17,7 @@ public class Hand extends Deck {
 			
 			pioche[i] = deck[piocheID];
 			deck[piocheID].setPiochee(true);
+			pioche[i].setVisible(true);
 		}
 	}
 	

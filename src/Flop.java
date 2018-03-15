@@ -44,6 +44,7 @@ public class Flop extends Hand {
 	protected void disposeFlop (Card[] deck, Card[] flop){
 		
 		piocher(deck, flop);
+		retourner(flop);
 
 		
 	}
