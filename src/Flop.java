@@ -1,5 +1,5 @@
 
-public class Flop extends Hand {
+public class Flop extends MyHand {
 	
 	final protected int flopSize = 3;
 	

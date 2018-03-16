@@ -1,4 +1,4 @@
-public class Hand extends Deck {
+public class MyHand extends Deck {
 
 	final protected int handSize = 2;
 
