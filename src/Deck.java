@@ -1,5 +1,5 @@
 
-public class Deck {
+public class Deck extends Card{
 
 	// Taille fixe et définie du nombre de cartes
 	final int deckSize = 52;
