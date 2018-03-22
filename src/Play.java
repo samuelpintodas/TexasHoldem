@@ -28,7 +28,7 @@ public class Play {
 		fpTest[1].setIdCard(13);
 		fpTest[2].setIdCard(4);
 		fpTest[3].setIdCard(17);
-		fpTest[4].setIdCard(1);
+		fpTest[4].setIdCard(30);
 		
 
 		// Phase 1: On rempli le deck et on pioche

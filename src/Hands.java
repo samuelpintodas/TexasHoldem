@@ -19,18 +19,18 @@ public class Hands extends Deck {
 
 	protected int sameCardSearch(Card[] flopHand) {
 
-		int sameCardValue = 0;
+		int sameCardValue = 1;
 		int i = 0;
 		int numberToFind;
 
 		for (i = 0; i < flopHand.length; i++) {
 			
-			if(i==0)
-				numberToFind = flopHand[i].getNumberCard();
+			if(i<4)
+				numberToFind = flopHand[i+1].getNumberCard();
 			else
-				numberToFind = flopHand[i-1].getNumberCard();
+				numberToFind = flopHand[i].getNumberCard();
 			
-			if (numberToFind == flopHand[i].getNumberCard()) {
+			if (flopHand[i].getNumberCard() == numberToFind) {
 				
 				sameCardValue += 1;
 			}
