@@ -21,14 +21,21 @@ public class Hands extends Deck {
 
 		int sameCardValue = 0;
 		int i = 0;
-		int numberToFind = flopHand[i].getNumberCard();
+		int numberToFind;
 
 		for (i = 0; i < flopHand.length; i++) {
 			
+			if(i==0)
+				numberToFind = flopHand[i].getNumberCard();
+			else
+				numberToFind = flopHand[i-1].getNumberCard();
 			
-			if (flopHand[i].getNumberCard() == numberToFind) {
+			if (numberToFind == flopHand[i].getNumberCard()) {
+				
 				sameCardValue += 1;
 			}
+//			}else
+//				i+=1;
 		}
 
 		return sameCardValue;
