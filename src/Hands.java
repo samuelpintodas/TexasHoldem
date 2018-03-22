@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Hands extends Deck {
 
@@ -19,9 +20,11 @@ public class Hands extends Deck {
 
 	protected int sameCardSearch(Card[] flopHand) {
 
-		int sameCardValue = 1;
+		int sameCardValue = 0;
 		int i = 0;
 		int numberToFind;
+		int numberFound = 0;
+		
 
 		for (i = 0; i < flopHand.length; i++) {
 			
@@ -31,11 +34,24 @@ public class Hands extends Deck {
 				numberToFind = flopHand[i].getNumberCard();
 			
 			if (flopHand[i].getNumberCard() == numberToFind) {
+				numberFound = i;
 				
 				sameCardValue += 1;
 			}
-//			}else
-//				i+=1;
+		}
+			
+			switch(sameCardValue){
+			
+			case 2:
+				System.out.println("Paire de " + flopHand[numberFound].getCardName());
+				break;
+			
+			case 3:
+				System.out.println("Brelan de " + flopHand[numberFound].getCardName());
+				break;
+				
+			case 4:
+				
 		}
 
 		return sameCardValue;
