@@ -1,15 +1,15 @@
 
 public class HandType {
 	
-	boolean royalQuinteFlush = false;
-	boolean quinteFlush = false;
-	boolean carre = false;
-	boolean fullHouse = false;
-	boolean color = false;
-	boolean quinte = false;
-	boolean brelan = false;
-	boolean doublePaire = false;
-	boolean paire = false;
-	boolean hauteur = false;
+	boolean royalQuinteFlush = false; // Suite d'un 10, Valet, Reine, Roi, As (de la même couleur)
+	boolean quinteFlush = false; // Suite de 5 cartes de la même couleur
+	boolean carre = false; // 4 cartes du même numero
+	boolean fullHouse = false; // un brelan et une paire
+	boolean color = false; // 5 cartes de la même couleur
+	boolean quinte = false; // Suite de 5 cartes
+	boolean brelan = false; // 3 cartes du même numéro
+	boolean doublePaire = false; // deux paires de deux nombres différents
+	boolean paire = false; // une paire
+	boolean hauteur = false; // la personne ayant la carte la plus haute 
 
 }
