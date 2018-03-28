@@ -1,3 +1,4 @@
+import java.awt.List;
 import java.util.ArrayList;
 
 public class Hands extends Deck {
@@ -18,45 +19,56 @@ public class Hands extends Deck {
 		return flopHand;
 	}
 
-	protected int sameCardSearch(Card[] flopHand) {
-
-		int sameCardValue = 0;
-		int i = 0;
-		int numberToFind;
-		int numberFound = 0;
-		
-
-		for (i = 0; i < flopHand.length; i++) {
-			
-			if(i<4)
-				numberToFind = flopHand[i+1].getNumberCard();
-			else
-				numberToFind = flopHand[i].getNumberCard();
-			
-			if (flopHand[i].getNumberCard() == numberToFind) {
-				numberFound = i;
-				
-				sameCardValue += 1;
-			}
-		}
-			
-			switch(sameCardValue){
-			
-			case 2:
-				System.out.println("Paire de " + flopHand[numberFound].getCardName());
-				break;
-			
-			case 3:
-				System.out.println("Brelan de " + flopHand[numberFound].getCardName());
-				break;
-				
-			case 4:
-				
-		}
-
-		return sameCardValue;
-
-	}
+//	protected int sameCardSearch(Card[] flopHand) {
+//
+//		int sameCardValue = 0;
+//		int i = 0;
+//		int numberToFind;
+//		int numberFound = 0;
+//		ArrayList<Card> toStock = new ArrayList<Card>();
+//		
+//
+//		for (i = 0; i < flopHand.length; i++) {
+//			
+//			if(i<4)
+//				numberToFind = flopHand[i+1].getNumberCard();
+//			else
+//				numberToFind = flopHand[i].getNumberCard();
+//			
+//			if (flopHand[i].getNumberCard() == numberToFind) {
+//				numberFound = i;
+//				toStock.add(flopHand[i]);
+//				
+//				sameCardValue += 1;
+//			}
+//		}
+//			
+//			switch(sameCardValue){
+//			
+//			case 2:
+//				System.out.println("Paire de " + flopHand[numberFound].getCardName());
+//				break;
+//			
+//			case 3:
+//				System.out.println("Brelan de " + flopHand[numberFound].getCardName());
+//				break;
+//				
+//			case 4:
+//				for(int j = 0; j<(toStock.size()-1); j++){
+//					
+//						if(toStock.get(j) == toStock.get(j+1)){
+//							System.out.println("Carré de " + toStock.get(j).getCardName());
+//						
+//						}else
+//							System.out.println();
+//					
+//				}
+//				
+//		}
+//
+//		return sameCardValue;
+//
+//	}
 	
 	// Affiche tout le deck en appelant la méthode "display" dans une boucle for
 	protected void displayFlopHand(Card[] flopHand) {

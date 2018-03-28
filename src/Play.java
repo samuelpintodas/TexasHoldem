@@ -24,11 +24,11 @@ public class Play {
 			fpTest[i] = new Card();
 			}
 		
-		fpTest[0].setIdCard(0);
-		fpTest[1].setIdCard(12);
-		fpTest[2].setIdCard(4);
-		fpTest[3].setIdCard(17);
-		fpTest[4].setIdCard(30);
+		fpTest[0].setIdCard(1);
+		fpTest[1].setIdCard(14);
+		fpTest[2].setIdCard(27);
+		fpTest[3].setIdCard(40);
+		fpTest[4].setIdCard(50);
 		
 
 		// Phase 1: On rempli le deck et on pioche
@@ -55,7 +55,6 @@ public class Play {
 
 		System.out.println("Trouvées:");
 //		System.out.println(myFlopHand.sameCardSearch(flopHand));
-		System.out.println(myFlopHand.sameCardSearch(fpTest));
 
 	}
 
