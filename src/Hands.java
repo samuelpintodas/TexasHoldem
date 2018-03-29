@@ -8,6 +8,7 @@ public class Hands extends Deck {
 	private int value;
 	private Card[] flopHand = new Card[5];
 
+	// Créé un tableau flopHand avec les tableaux flop et hand
 	protected Card[] createHand(Card[] flop, Card[] hand) {
 
 		for (int i = 0; i < flop.length; i++)
@@ -70,7 +71,7 @@ public class Hands extends Deck {
 //
 //	}
 	
-	// Affiche tout le deck en appelant la méthode "display" dans une boucle for
+	// Affiche la flopHand en appelant la méthode "display" dans une boucle for
 	protected void displayFlopHand(Card[] flopHand) {
 		
 		for (int i = 0; i < flopHand.length; i++) {
