@@ -29,7 +29,7 @@ public class Deck extends Card{
 	}
 
 	// Permet l'affichage d'une carte définie par son ID dans la console
-	public void display(Card[] deck, int idCard) {
+	protected void display(Card[] deck, int idCard) {
 
 		System.out.println("---------------------------------");
 		System.out.println("Idcard : " + deck[idCard].getIdCard());
