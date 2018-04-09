@@ -1,6 +1,6 @@
 public class MyHand extends Deck {
 
-	final protected int handSize = 2;
+	final protected int HANDSIZE = 2;
 
 	// Pioche une carte dans un deck défini et le place dans la pioche
 	protected void piocher(Card[] deck, Card[] pioche) {

@@ -2,7 +2,7 @@
 public class Deck extends Card{
 
 	// Taille fixe et définie du nombre de cartes
-	final int deckSize = 52;
+	final int DECKSIZE = 52;
 
 	// Rempli le deck de cartes
 	protected void fillDeck(Card[] deckFull) {

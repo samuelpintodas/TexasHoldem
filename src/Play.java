@@ -12,10 +12,10 @@ public class Play {
 
 		Play myPlay = new Play();
 
-		Card[] deck = new Card[myDeck.deckSize];
-		Card[] main = new Card[myHand.handSize];
-		Card[] flop = new Card[myFlop.flopSize];
-		Card[] flopHand = new Card[myFlopHand.flopHandSize];
+		Card[] deck = new Card[myDeck.DECKSIZE];
+		Card[] main = new Card[myHand.HANDSIZE];
+		Card[] flop = new Card[myFlop.FLOPSIZE];
+		Card[] flopHand = new Card[myFlopHand.FLOPHANDSIZE];
 		
 		// flopHandTest
 		Card[] fpTest = new Card[5];

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Hands extends Deck {
 
-	final protected int flopHandSize = 5;
+	final protected int FLOPHANDSIZE = 5;
 	private String handName;
 	private int value;
 	private Card[] flopHand = new Card[5];

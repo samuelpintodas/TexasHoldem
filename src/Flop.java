@@ -1,13 +1,13 @@
 
 public class Flop extends MyHand {
 	
-	final protected int flopSize = 3;
+	final protected int FLOPSIZE = 3;
 	
 //	protected void displayflop(Card[] flop){
 //		
 //		System.out.println("\n\nFLOP:");
 //		
-//		for(int i=0; i<flopSize; i++){
+//		for(int i=0; i<FLOPSIZE; i++){
 //
 //			if(flop[i].isVisible()== true){
 //				
@@ -25,7 +25,7 @@ public class Flop extends MyHand {
 		
 		System.out.println("\n\nFLOP:");
 		
-		for(int i=0; i<flopSize; i++){
+		for(int i=0; i<FLOPSIZE; i++){
 			
 			if(flop[i].isVisible() == false){
 				flop[i].setVisible(true);
