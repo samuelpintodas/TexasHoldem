@@ -12,4 +12,12 @@ public class HandType {
 	boolean paire = false; // une paire
 	boolean hauteur = false; // la personne ayant la carte la plus haute 
 
+	
+	private void cardSorting (Card[] flopHand) {
+		
+	}
+	
+	private void handSearching (Card[] flopHand){
+		
+	}
 }
