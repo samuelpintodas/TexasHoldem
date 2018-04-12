@@ -6,7 +6,7 @@ public class Hands extends Deck {
 	final protected int FLOPHANDSIZE = 5;
 //	private String handName;
 //	private int value;
-	private Card[] flopHand = new Card[5];
+	protected Card[] flopHand = new Card[5];
 
 	// Créé un tableau flopHand avec les tableaux flop et hand
 	protected Card[] createHand(Card[] flop, Card[] hand) {
