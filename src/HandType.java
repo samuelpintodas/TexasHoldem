@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class HandType {
 	
@@ -15,6 +16,8 @@ public class HandType {
 	
 	private void cardSorting (Card[] flopHand) {
 		
+
+		 
 	}
 	
 	private void handSearching (Card[] flopHand){
