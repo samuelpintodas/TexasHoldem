@@ -13,23 +13,27 @@ public class HandType {
 	boolean paire = false; // une paire
 	boolean hauteur = false; // la personne ayant la carte la plus haute 
 
-	
+	// Méthode triant les cartes dans l'ordre des numéros
 	protected void cardSorting (Card[] flopHand) {
 		
-		int [] cardIdTab = new int[flopHand.length];
+		int [] cardNumberTab = new int[flopHand.length];
 		
 		for(int i = 0; i<flopHand.length; i++){
 	
-			cardIdTab[i] = flopHand[i].getIdCard();
+			cardNumberTab[i] = flopHand[i].getNumberCard();
 			
 		}
 		
-		Arrays.sort(cardIdTab);
+		Arrays.sort(cardNumberTab);
+		
+		for (int i = 0; i < cardNumberTab.length; i++) {
+			System.out.print(cardNumberTab[i] + ",");
+		}
 		
 		
 		for(int j = 0; j<flopHand.length; j++){
 			
-			flopHand[j].setIdCard(cardIdTab[j]);
+			flopHand[j].setNumberCard(cardNumberTab[j]);
 			
 		}
 		 
