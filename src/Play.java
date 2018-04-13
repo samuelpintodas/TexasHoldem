@@ -9,6 +9,7 @@ public class Play {
 		MyHand myHand = new MyHand();
 		Flop myFlop = new Flop();
 		Hands myFlopHand = new Hands();
+		HandType myHandType = new HandType();
 
 		Play myPlay = new Play();
 
@@ -25,32 +26,39 @@ public class Play {
 			}
 		
 		fpTest[0].setIdCard(1);
-		fpTest[1].setIdCard(14);
-		fpTest[2].setIdCard(27);
-		fpTest[3].setIdCard(40);
-		fpTest[4].setIdCard(50);
+		fpTest[1].setIdCard(22);
+		fpTest[2].setIdCard(16);
+		fpTest[3].setIdCard(49);
+		fpTest[4].setIdCard(40);
 		
 
-		// Phase 1: On rempli le deck et on pioche
-		myDeck.fillDeck(deck);
-		myHand.piocher(deck, main);
-		
-		// Phase 2: On regarde nos cartes et on dispose le flop
-		myHand.displayHand(main);
-		myFlop.disposeFlop(deck, flop);
-
-		myPlay.promptEnterKey();
-		
-		// Phase 3: On raffiche la main et on retourne le flop pour le dévoiler
-		myHand.displayHand(main);
-		myFlop.retourner(flop);
-
-		
-		flopHand = myFlopHand.createHand(flop, main);
-
-		System.out.println("FlopHand:");
+//		// Phase 1: On rempli le deck et on pioche
+//		myDeck.fillDeck(deck);
+//		myHand.piocher(deck, main);
+//		
+//		// Phase 2: On regarde nos cartes et on dispose le flop
+//		myHand.displayHand(main);
+//		myFlop.disposeFlop(deck, flop);
+//
+//		myPlay.promptEnterKey();
+//		
+//		// Phase 3: On raffiche la main et on retourne le flop pour le dévoiler
+//		myHand.displayHand(main);
+//		myFlop.retourner(flop);
+//
+//		
+//		flopHand = myFlopHand.createHand(flop, main);
+//
+//		System.out.println("FlopHand:");
 
 //		myFlopHand.displayFlopHand(flopHand);
+		myFlopHand.displayFlopHand(fpTest);
+		
+		myHandType.cardSorting(fpTest);
+		System.out.println("\n------------------------------");
+		System.out.println("Une fois trié : ");
+		System.out.println("------------------------------\n");
+		
 		myFlopHand.displayFlopHand(fpTest);
 
 		System.out.println("Trouvées:");

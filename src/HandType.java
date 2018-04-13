@@ -14,13 +14,28 @@ public class HandType {
 	boolean hauteur = false; // la personne ayant la carte la plus haute 
 
 	
-	private void cardSorting (Card[] flopHand) {
+	protected void cardSorting (Card[] flopHand) {
 		
-
+		int [] cardIdTab = new int[flopHand.length];
+		
+		for(int i = 0; i<flopHand.length; i++){
+	
+			cardIdTab[i] = flopHand[i].getIdCard();
+			
+		}
+		
+		Arrays.sort(cardIdTab);
+		
+		
+		for(int j = 0; j<flopHand.length; j++){
+			
+			flopHand[j].setIdCard(cardIdTab[j]);
+			
+		}
 		 
 	}
 	
-	private void handSearching (Card[] flopHand){
+	protected void handSearching (Card[] flopHand){
 		
 	}
 }
