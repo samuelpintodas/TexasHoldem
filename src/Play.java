@@ -54,7 +54,7 @@ public class Play {
 //		myFlopHand.displayFlopHand(flopHand);
 		myFlopHand.displayFlopHand(fpTest);
 		
-		myHandType.cardSorting(fpTest);
+		myHandType.handSearching(fpTest);
 		System.out.println("\n------------------------------");
 		System.out.println("Une fois trié : ");
 		System.out.println("------------------------------\n");

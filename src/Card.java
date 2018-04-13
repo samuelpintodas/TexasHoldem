@@ -1,5 +1,6 @@
 
-public class Card {
+public class Card implements Comparable<Card>
+{
 	
 	private int idCard;	// place de la Cards dans le deck
 	private int numberCard;	// numéro de la Card dans sa couleur (de 1 à 13)
@@ -140,6 +141,12 @@ public class Card {
 	
 	public void setVisible(boolean visible) {
 		this.visible = visible;
+	}
+
+	@Override
+	public int compareTo(Card c)
+	{
+		return (numberCard - c.getNumberCard());
 	}
 	
 	
