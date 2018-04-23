@@ -52,16 +52,18 @@ public class Play {
 //		System.out.println("FlopHand:");
 
 //		myFlopHand.displayFlopHand(flopHand);
-		myFlopHand.displayFlopHand(fpTest);
-		
-		myHandType.handSearching(fpTest);
-		System.out.println("\n------------------------------");
-		System.out.println("Une fois trié : ");
-		System.out.println("------------------------------\n");
-		
-		myFlopHand.displayFlopHand(fpTest);
-
-		System.out.println("Trouvées:");
+//		myFlopHand.displayFlopHand(fpTest);
+//		
+//		myHandType.handSearching(fpTest);
+//		System.out.println("\n------------------------------");
+//		System.out.println("Une fois trié : ");
+//		System.out.println("------------------------------\n");
+//		
+//		myFlopHand.displayFlopHand(fpTest);
+//
+//		System.out.println("Trouvées:");
+		myDeck.fillDeck(deck);
+		myDeck.displayDeck(deck);
 //		System.out.println(myFlopHand.sameCardSearch(flopHand));
 
 	}
