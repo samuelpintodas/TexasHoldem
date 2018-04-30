@@ -19,17 +19,17 @@ public class Play {
 		Card[] flopHand = new Card[myFlopHand.FLOPHANDSIZE];
 		
 		// flopHandTest
-		Card[] fpTest = new Card[5];
+		Card[] fpTest = new Card[myFlopHand.FLOPHANDSIZE];
 		
 		for(int i = 0; i<fpTest.length; i++){
 			fpTest[i] = new Card();
 			}
 		
 		fpTest[0].setIdCard(1);
-		fpTest[1].setIdCard(22);
-		fpTest[2].setIdCard(16);
-		fpTest[3].setIdCard(49);
-		fpTest[4].setIdCard(40);
+		fpTest[1].setIdCard(14);
+		fpTest[2].setIdCard(27);
+		fpTest[3].setIdCard(42);
+		fpTest[4].setIdCard(5);
 		
 
 //		// Phase 1: On rempli le deck et on pioche
@@ -63,7 +63,7 @@ public class Play {
 //
 //		System.out.println("Trouvées:");
 		myDeck.fillDeck(deck);
-		myDeck.displayDeck(deck);
+		myHandType.handSearching(fpTest);
 //		System.out.println(myFlopHand.sameCardSearch(flopHand));
 
 	}
