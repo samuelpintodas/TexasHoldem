@@ -28,7 +28,7 @@ public class Play {
 		fpTest[0].setIdCard(0);
 		fpTest[1].setIdCard(26);
 		fpTest[2].setIdCard(12);
-		fpTest[3].setIdCard(38);
+		fpTest[3].setIdCard(39);
 		fpTest[4].setIdCard(13);
 		
 
