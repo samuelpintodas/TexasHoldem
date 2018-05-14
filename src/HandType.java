@@ -185,7 +185,7 @@ public class HandType {
 			if(	flopHand[i].getNumberCard() == cardFound &&
 				indexFound.contains(i) == false){
 				
-				System.out.println("brelan de " + cardFound + "!");
+				System.out.println("brelan de " + cardFound + "! ");
 				
 			}
 		}
