@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class HandType {
@@ -21,8 +22,8 @@ public class HandType {
 			rulesTab[i] = new HandType();
 			rulesTab[i].setFound(false);
 			rulesTab[i].setValue(0);
-//
-//			System.out.println("Allrules: case n° " + i + ": remplie!");
+			//
+			// System.out.println("Allrules: case n° " + i + ": remplie!");
 		}
 
 		rulesTab[0].setHTName("hauteur"); // la personne ayant la carte la plus
@@ -47,84 +48,149 @@ public class HandType {
 
 		Arrays.sort(flopHand);
 		fillRules(allRules);
-		
 
 		boolean found = false;
-		int cptSame = 1;
+		int cptSame = 0;
 		int lastIndexFound = 0;
 		int lastCardFound = 53;
-		int i = 0;
-			
-		Card toFind = null;	
+		int cardFound = 14;
 
-		// On test s'il y a une paire, un brelan ou un carré
-		
-		// Tant que l'on a pas fini de parcourir le tableau et que l'on a rien trouvé
-		do  {
-			// On cherche les paires, brelans et carrés
-			for (i = 0; i < flopHand.length-1; i++) {
-				toFind = flopHand[i];
-				System.out.println("Carte cherchee : " + flopHand[i].getCardName() + " de " + flopHand[i].getColor());
-				for (int j = i+1; j < flopHand.length; j++) {
-				
-					if (flopHand[j].getNumberCard() == toFind.getNumberCard() 
-//						&& lastIndexFound != j 
-						&& flopHand[i].getNumberCard() == lastCardFound) {
-						found = true;
-						cptSame += 1;
-						// On récupère le dernier indice où une carte identique a été trouvée
-						lastIndexFound = j;
-						lastCardFound = flopHand[j].getNumberCard();
-						System.out.println("Trouve une carte à l'index [" + lastIndexFound+ "] , cartes identiques trouvées : " + cptSame);
-					} 
-					else{
-						found = false;
-						
-					}
-					lastCardFound = flopHand[lastIndexFound].getNumberCard();
-				}	
-			}
-		
-		}while ((i < flopHand.length-1 && found == false)|| cptSame ==4);
+		ArrayList<Integer> indexFound = new ArrayList<Integer>();
+		// ArrayList<Integer> cardToAvoid = new ArrayList<Integer>();
+		//
+		// Card toFind = null;
+		//
+		peer(flopHand, indexFound, cardFound);
+		//
+		// // On test s'il y a une paire, un brelan ou un carré
+		//
+		// // Tant que l'on a pas fini de parcourir le tableau et que l'on a
+		// rien trouvé
+		//
+		// // On cherche les paires, brelans et carrés
+		// for (i = 0; i < flopHand.length-1; i++) {
+		// toFind = flopHand[i];
+		// System.out.println("Carte cherchee : " + flopHand[i].getCardName());
+		// for (int j = 0; j < flopHand.length; j++) {
+		//
+		// if (toFind.getNumberCard() == flopHand[j].getNumberCard()
+		// && flopHand[i].getNumberCard() == lastCardFound
+		// && indexFound.contains(j) == false) {
+		//
+		// found = true;
+		//
+		// // On récupère le dernier indice où une carte identique a été trouvée
+		// lastIndexFound = j;
+		// indexFound.add(j);
+		//
+		// lastCardFound = toFind.getNumberCard();
+		// System.out.println("Trouve une carte à l'index [" + lastIndexFound+
+		// "] , cartes identiques trouvées : " + indexFound.size());
+		// }
+		// else{
+		// found = false;
+		//
+		//
+		// }
+		// lastCardFound = flopHand[lastIndexFound].getNumberCard();
+		// }
+		// }
 
-		switch (cptSame) {
+		cptSame = indexFound.size();
 
-		case 1:
-			System.out.println("Pas de paire, ni de brelan, ni de carré");
-			System.out.println("Found: " + found);
-			System.out.println("Card to find :" + toFind.getCardName());
-			break;
-
-		case 2:
-			allRules[1].setFound(true);
-			System.out.println("Card to find :" + toFind.getCardName());
-			System.out.println("Paire de " + flopHand[lastIndexFound].getCardName());
-			break;
-
-		case 3:
-			allRules[3].setFound(true);
-			System.out.println("Card to find :" + toFind.getCardName());
-			System.out.println("Brelan de " + flopHand[lastIndexFound].getCardName());
-			break;
-
-		case 4:
-			allRules[7].setFound(true);
-			System.out.println("Card to find :" + toFind.getCardName());
-			System.out.println("Carré de " + flopHand[lastIndexFound].getCardName());
-			break;
-
-		default:
-			System.out.println("IMPOSSIBLE: compteur supérieur à 4");
-			System.out.println("Compteur = " + cptSame);
-			break;
-		}
+		// switch (cptSame) {
+		//
+		// case 1:
+		// System.out.println("Pas de paire, ni de brelan, ni de carré");
+		// System.out.println("Found: " + found);
+		// System.out.println("Card to find :" + toFind.getCardName());
+		// System.out.println("Taille de l'arraylist: " + indexFound.size());
+		// break;
+		//
+		// case 2:
+		// allRules[1].setFound(true);
+		// System.out.println("Card to find :" + toFind.getCardName());
+		// System.out.println("Paire de " +
+		// flopHand[lastIndexFound].getCardName());
+		// System.out.println("Taille de l'arraylist: " + indexFound.size());
+		// break;
+		//
+		// case 3:
+		// allRules[3].setFound(true);
+		// System.out.println("Card to find :" + toFind.getCardName());
+		// System.out.println("Brelan de " +
+		// flopHand[lastIndexFound].getCardName());
+		// System.out.println("Taille de l'arraylist: " + indexFound.size());
+		// break;
+		//
+		// case 4:
+		// allRules[7].setFound(true);
+		// System.out.println("Card to find :" + toFind.getCardName());
+		// System.out.println("Carré de " +
+		// flopHand[lastIndexFound].getCardName());
+		// System.out.println("Taille de l'arraylist: " + indexFound.size());
+		// break;
+		//
+		// default:
+		// System.out.println("IMPOSSIBLE: compteur supérieur à 4");
+		// System.out.println("Compteur = " + cptSame);
+		// System.out.println("Taille de l'arraylist: " + indexFound.size());
+		// break;
+		// }
 
 	}
-	
-	protected int peerBrelanSquare(int cptSame, int lastIndexFound){
+
+	private boolean peer(Card[] flopHand, ArrayList<Integer> indexFound, int cardFound) {
+
+		int cardToFind = 14; // index de la carte à trouver
+		boolean found = false; // défini si une paire a été trouvée ou non
+
+
+		while (found == false) {
+
+			for (int i = 0; i < flopHand.length - 1; i++) {
+				cardToFind = flopHand[i].getNumberCard();
+				for (int j = i + 1; j < flopHand.length; j++) {
+					if (flopHand[j].getNumberCard() == cardToFind) {
+
+						cardFound = cardToFind;
+						found = true;
+						System.out.println("Paire de " + cardFound + "!");
+						
+						allRules[1].setFound(true);
+					}
+				}
+			}
+		}
+
+		for (int k = 0; k < flopHand.length; k++) {
+			if (flopHand[k].getNumberCard() == cardFound) {
+				indexFound.add(k);
+			}
+		}
+
+		System.out.println("Taille de l'arraylist IndexFound : " + indexFound.size());
+		System.out.println("Indexs trouvés:");
+		for (int i = 0; i < indexFound.size(); i++) {
+			System.out.print(indexFound.get(i) + " ");
+		}
+
+		return allRules[1].isFound();
+
+	}
+
+	private boolean brelan(Card[] flopHand, ArrayList<Integer> indexFound, int cardFound) {
+
+		for(int i = 0; i<flopHand.length; i++){
+			if(	flopHand[i].getNumberCard() == cardFound &&
+				indexFound.contains(i) == false){
+				
+				System.out.println("brelan de " + cardFound + "!");
+				
+			}
+		}
 		
-		
-		return lastIndexFound;
+		return allRules[3].isFound();
 	}
 
 	protected void highterFound(Card[] flopHand) {
@@ -135,13 +201,14 @@ public class HandType {
 
 		for (int i = 0; i < rulesTab.length; i++) {
 			System.out.print("\nIndex [" + i + "]");
-			System.out.print("Nom : " + rulesTab[i].getHTName()+"\n");
-			System.out.print("Found : " + rulesTab[i].isFound()+"\n");
-			System.out.print("Valeur: " + rulesTab[i].getValue()+"\n");
+			System.out.print("Nom : " + rulesTab[i].getHTName() + "\n");
+			System.out.print("Found : " + rulesTab[i].isFound() + "\n");
+			System.out.print("Valeur: " + rulesTab[i].getValue() + "\n");
 		}
 	}
 
-	// --------------------------------GETTERS & SETTERS----------------------------------------------------------------------------
+	// --------------------------------GETTERS &
+	// SETTERS----------------------------------------------------------------------------
 
 	// -GETTERS---------------------------------------------------
 
